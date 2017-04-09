@@ -10,6 +10,7 @@
             --button-color: hsla(30, 100%, 75%, 1);
             --button-color-hover: hsla(30, 100%, 60%, 1);
             --button-color-transition-duration: .1s;
+            --button-color-shadow-hover: rgba(128, 128, 128, 0.25);
         }
 
         .button {
@@ -22,12 +23,14 @@
             box-sizing: border-box;
             outline: none;
             cursor: pointer;
-            transition: color var(--button-color-transition-duration);
+            transition-property: color, box-shadow;
+            transition-duration: var(--button-color-transition-duration);
             font-size: 16px;
         }
 
         .button:hover {
             color: var(--button-color-hover);
+            box-shadow: 0 0 1em var(--button-color-shadow-hover);
         }
     </style>
     <button class='button'>Login</button>
