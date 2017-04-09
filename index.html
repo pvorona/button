@@ -9,6 +9,8 @@
         :root {
             --button-color: hsla(30, 100%, 75%, 1);
             --button-color-hover: hsla(30, 100%, 60%, 1);
+            --button-color-success: hsla(145, 100%, 35%, 1);
+            --button-color-success-hover: hsla(145, 100%, 30%, 1);
             --button-color-transition-duration: .1s;
             --button-color-shadow-hover: rgba(128, 128, 128, 0.1);
         }
@@ -29,7 +31,8 @@
             font-size: 16px;
         }
 
-        .button:hover {
+        .button:hover,
+        .button:focus {
             color: var(--button-color-hover);
             box-shadow: 0 0 1em var(--button-color-shadow-hover);
         }
@@ -37,8 +40,16 @@
         .button:active {
             box-shadow: 0 0 .5em var(--button-color-shadow-hover);
         }
+
+        .button.success {
+            color: var(--button-color-success);
+        }
+
+        .button.success:hover {
+            color: var(--button-color-success-hover);
+        }
     </style>
     <button class='button'>Login</button>
-    <button class='button'>Register</button>
+    <button class='button success'>Register</button>
 </body>
 </html>
